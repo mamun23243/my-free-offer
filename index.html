@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>টেলিকম ধামাকা অফার ২০২৬!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #ff0055, #0055ff);
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .timer-box {
+            background: #ffcc00;
+            color: #000;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+        .section-title {
+            text-align: center;
+            margin: 30px 0 15px;
+            color: #111;
+            font-size: 1.5rem;
+        }
+        /* Offer Cards */
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+            border-top: 5px solid #ff0055;
+        }
+        .card.blue { border-top-color: #0055ff; }
+        .card.green { border-top-color: #00cc66; }
+        .card h3 { margin-bottom: 10px; font-size: 1.3rem; }
+        .card p { color: #666; font-size: 0.95rem; margin-bottom: 15px; }
+        .btn-claim {
+            display: inline-block;
+            background: #ff0055;
+            color: white;
+            text-decoration: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .card.blue .btn-claim { background: #0055ff; }
+        .card.green .btn-claim { background: #00cc66; }
+        
+        /* CPA Tasks Section */
+        .tasks-box {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 25px;
+            border: 2px dashed #ff0055;
+        }
+        .task-item {
+            background: #f9f9f9;
+            border-left: 5px solid #ffcc00;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+        .task-item h4 { margin-bottom: 5px; color: #222; }
+        .task-item p { font-size: 0.9rem; color: #555; margin-bottom: 10px; }
+        .btn-task {
+            display: inline-block;
+            background: #00cc66;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.95rem;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        /* Comments Section */
+        .comments-section {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        .comment {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+        .comment:last-child { border-bottom: none; }
+        .comment-author { font-weight: bold; color: #365899; font-size: 0.95rem; }
+        .comment-text { margin: 5px 0; font-size: 0.95rem; }
+        .comment-meta { font-size: 0.8rem; color: #90949c; }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8rem;
+            color: #777;
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Countdown Timer -->
+    <div class="timer-box">
+        ⚠️ অফারটির সময় বাকি আছে মাত্র: <span id="countdown">10:00</span> মিনিট! দ্রুত করুন!
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <h1>💥 টেলিকম ধামাকা অফার ২০২৬!</h1>
+        <p>আপনার প্রিয় সিমে জিতে নিন ফ্রি ইন্টারনেট, মিনিট এবং আকর্ষণীয় গিফট কার্ড!</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- Offers Grid -->
+        <h2 class="section-title">🎁 আপনার পছন্দের অফারটি সিলেক্ট করুন</h2>
+        <div class="offers-grid">
+            <div class="card">
+                <h3>ফ্রি ২০ GB ইন্টারনেট</h3>
+                <p>মেয়াদ: ৩০ দিন (জিপি ও বাংলালিংক)</p>
+                <a href="#tasks" class="btn-claim">এখনই নিন ➔</a>
+            </div>
+            <div class="card blue">
+                <h3>৫০০ মিনিট একদম ফ্রি</h3>
+                <p>মেয়াদ: ৩০ দিন (রবি ও এয়ারটেল)</p>
+                <a href="#tasks" class="btn-claim">এখনই নিন ➔</a>
+            </div>
+            <div class="card green">
+                <h3>💰 ৫০০ টাকা ফ্রি রিচার্জ</h3>
+                <p>বিকাশ বা নগদের মাধ্যমে সরাসরি</p>
+                <a href="#tasks" class="btn-claim">এখনই নিন ➔</a>
+            </div>
+        </div>
+
+        <!-- CPA Tasks Section -->
+        <div id="tasks" class="tasks-box">
+            <h2 style="text-align: center; margin-bottom: 20px; color: #ff0055; font-size: 1.4rem;">⬇️ অফারটি একটিভ করতে নিচের যেকোনো ২টি সহজ কাজ সম্পন্ন করুন: ⬇️</h2>
+            
+            <!-- Task 1 -->
+            <div class="task-item">
+                <h4>টাস্ক ১: ভেরিফিকেশন সার্ভে (মাত্র ২ মিনিট)</h4>
+                <p>আমাদের স্পন্সরদের একটি ছোট সার্ভে (Survey) পূরণ করে আপনার ইউজার আইডি ভেরিফাই করুন।</p>
+                <!-- নিজের CPA Offer Link নিচে href এর ভেতর বসাবে -->
+                <a href="তোমার_CPA_সার্ভে_লিংক_এখানে" target="_blank" class="btn-task">👉 সার্ভে শুরু করতে এখানে ক্লিক করুন</a>
+            </div>
+
+            <!-- Task 2 -->
+            <div class="task-item" style="border-left-color: #0055ff;">
+                <h4>টাস্ক ২: ফ্রি অ্যাকাউন্ট সাইন-আপ</h4>
+                <p>নিচের লিংকে গিয়ে একটি ফ্রি অ্যাকাউন্ট তৈরি (Sign Up) করুন এবং আপনার ইমেইলটি ভেরিফাই করুন।</p>
+                <!-- নিজের CPA Offer Link নিচে href এর ভেতর বসাবে -->
+                <a href="তোমার_CPA_সাইনআপ_লিংক_এখানে" target="_blank" class="btn-task" style="background: #0055ff;">👉 ফ্রি সাইন-আপ করতে এখানে ক্লিক করুন</a>
+            </div>
+
+            <!-- Task 3 -->
+            <div class="task-item" style="border-left-color: #00cc66;">
+                <h4>টাস্ক ৩: লাকি স্পিন ও গিফট পেজ</h4>
+                <p>আপনার ভাগ্য পরীক্ষা করুন এবং জিতে নিন ১০০০ টাকা পর্যন্ত ক্যাশব্যাক অফার!</p>
+                <!-- নিজের CPA Offer Link নিচে href এর ভেতর বসাবে -->
+                <a href="তোমার_গিফট_পেজ_লিংক_এখানে" target="_blank" class="btn-task" style="background: #00cc66;">👉 গিফট পেজে প্রবেশ করুন</a>
+            </div>
+        </div>
+
+        <!-- Facebook Style Fake Comments Section -->
+        <div class="comments-section">
+            <h3 style="border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 10px; font-size: 1.1rem; color: #4b4f56;">সাম্প্রতিক মন্তব্যসমূহ (১৪)</h3>
+            
+            <div class="comment">
+                <p class="comment-author">সাকিব আহমেদ (ঢাকা)</p>
+                <p class="comment-text">প্রথমে বিশ্বাস হয় নাই, কিন্তু টাস্কটা শেষ করার ৫ মিনিটের মধ্যে জিপিতে ২০ জিবি চলে আসছে! ধন্যবাদ ভাই।</p>
+                <p class="comment-meta">Like • Reply • 5m ago</p>
+            </div>
+            
+            <div class="comment">
+                <p class="comment-author">রাফসান হোসাইন (চট্টগ্রাম)</p>
+                <p class="comment-text">আমি সাইন আপ করার পর ৫০০ টাকা রিচার্জ পাইছি। আসলেই দারুন ট্রিক, সবাই ট্রাই করতে পারেন।</p>
+                <p class="comment-meta">Like • Reply • 12m ago</p>
+            </div>
+
+            <div class="comment">
+                <p class="comment-author">মিতু আক্তার (বগুড়া)</p>
+                <p class="comment-text">আমার রবি সিমে কাজ করেছে। খুবই সহজ কাজ ছিল, কোনো টাকা কাটে নাই।</p>
+                <p class="comment-meta">Like • Reply • 34m ago</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Disclaimer: This offer is sponsored by third-party ad networks. Standard terms and conditions apply. All trademarks belong to respective telecom operators.</p>
+    </footer>
+
+    <!-- JavaScript code for Countdown Timer -->
+    <script>
+        function startTimer(duration, display) {
+            var timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    timer = duration; // Timer reset points
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            var tenMinutes = 60 * 10,
+                display = document.querySelector('#countdown');
+            startTimer(tenMinutes, display);
+        };
+    </script>
+<!-- তোমার পেজের অন্য সব কন্টেন্ট এখানে শেষ হলো -->
+
+    <!-- ⬇️ এখানে তোমার Adsterra Popunder কোডটি পেস্ট করো ⬇️ -->
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'তোমার_adsterra_popunder_key',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/js/xxx.js"></script>
+    <!-- ⬆️ পপআন্ডার কোড শেষ ⬆️ -->
+
+</body>
+</html>
+<!-- তোমার পেজের অন্য সব কন্টেন্ট এখানে শেষ হলো -->
+
+    <!-- ⬇️ এখানে তোমার Adsterra Popunder কোডটি পেস্ট করো ⬇️ -->
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'তোমার_adsterra_popunder_key',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/js/xxx.js"></script>
+    <!-- ⬆️ পপআন্ডার কোড শেষ ⬆️ -->
+
+
+</body>
+</html>
